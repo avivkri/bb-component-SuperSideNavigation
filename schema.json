@@ -1,12 +1,19 @@
 {
   "type": "component",
-  "metadata": {},
+  "metadata": {
+    "svelteMajor": 5
+  },
   "schema": {
     "name": "bb-component-SuperSideNavigation",
     "friendlyName": "Super Side Navigation",
     "description": "A Side Navigation / Item List component for Budibase.",
     "icon": "RailLeft",
-    "styles": [ "size", "background", "border", "padding" ],
+    "styles": [
+      "size",
+      "background",
+      "border",
+      "padding"
+    ],
     "hasChildren": true,
     "showEmptyState": false,
     "settings": [
@@ -15,27 +22,42 @@
         "key": "structureSource",
         "label": "Structure Source",
         "options": [
-          { "label": "Data Provider", "value": "dataProvider" },
-          { "label": "JSON", "value": "json"},
-          { "label": "Custom", "value": "custom"}
+          {
+            "label": "Data Provider",
+            "value": "dataProvider"
+          },
+          {
+            "label": "JSON",
+            "value": "json"
+          },
+          {
+            "label": "Custom",
+            "value": "custom"
+          }
         ],
-        "defaultValue":"json"
+        "defaultValue": "json"
       },
       {
         "type": "text",
         "key": "staticStructure",
         "label": "JSON Structure",
-        "dependsOn": { "setting": "structureSource", "value": "json" }
+        "dependsOn": {
+          "setting": "structureSource",
+          "value": "json"
+        }
       },
       {
         "section": true,
         "name": "Sections Settings",
-        "dependsOn": { "setting": "structureSource", "value": "dataProvider" },
+        "dependsOn": {
+          "setting": "structureSource",
+          "value": "dataProvider"
+        },
         "settings": [
           {
             "type": "dataProvider",
             "key": "dataProvider",
-            "label": "Data Provider"   
+            "label": "Data Provider"
           },
           {
             "type": "field",
@@ -56,11 +78,20 @@
           {
             "type": "select",
             "key": "itemSorting",
-            "label" : "Sort Items",
-            "options" : [
-              { "label" : "Ascending", "value": "ascending" },
-              { "label" : "Descending", "value": "descending" },
-              { "label" : "No Sorting", "value": "unsorted" }
+            "label": "Sort Items",
+            "options": [
+              {
+                "label": "Ascending",
+                "value": "ascending"
+              },
+              {
+                "label": "Descending",
+                "value": "descending"
+              },
+              {
+                "label": "No Sorting",
+                "value": "unsorted"
+              }
             ]
           }
         ]
